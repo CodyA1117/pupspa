@@ -1,14 +1,29 @@
-body {
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
     background-color: #fcfcfc;
     color: #db6363;
     text-align: center;
   }
   
   .grid {
-  
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 20px;
   }
   
   header {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
   
   }
   
@@ -28,6 +43,9 @@ body {
     font-size: 3em;
     font-weight: 300;
     letter-spacing: 3.7px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  
   
   }
   
@@ -43,6 +61,9 @@ body {
   
   .about {
     background-color: #f0f0f0;
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
   
   }
   
@@ -62,18 +83,22 @@ body {
     font-weight: 500;
     letter-spacing: 0.5px;
     text-align: center;
+    display: grid;
   
   }
   
   .address {
+    grid-column: 1 /span 2;
   
   }
   
   .hours {
+    grid-column: 3 / span 2;
   
   }
   
   .call-us {
+    grid-column: 5 / span 2;
   
   }
   
@@ -89,14 +114,17 @@ body {
     font-size: 18px;
     font-style: italic;
     letter-spacing: 3.7px;
+    display: grid;
   
   }
   
   .one {
+    grid-column: 1/ span 3;
   
   }
   
   .two {
+    grid-column: 4 /span 3;
   
   }
   
@@ -106,5 +134,9 @@ body {
     font-family: Poppins;
     font-size: 16px;
     letter-spacing: 0.4px;
-  
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    align-items: center;
+    text-align: center;
   }
